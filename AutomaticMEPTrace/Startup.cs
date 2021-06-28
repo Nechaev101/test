@@ -24,7 +24,7 @@ namespace AutomaticMEPTrace
                      // merge in your application resources
                      Application.Current.Resources.MergedDictionaries.Add(
                          Application.LoadComponent(
-                             new Uri("AutomaticMEPTrace;component/themes/generic.xaml",
+                             new Uri("AutomaticMEPTrace;component/Themes/Generic.xaml",
                                  UriKind.Relative)) as ResourceDictionary);
                  SetupNlog();
                  App.ThisApp!.ShowFormSeparateThread(commandData.Application);
