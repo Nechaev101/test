@@ -1,0 +1,25 @@
+name: Build
+
+on: 
+  push:
+    branches: [ master,develop ]
+  pull_request:
+    branches: [ master,develop ]
+jobs:
+  build:
+    name: Build Project
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: setup msbuild
+      uses: microsoft/setup-msbuild@v1
+      
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.5
+      
+    - name: Restore Nuget packages
+      run: nuget restore AutomaticMEPTrace.sln
+     
+    - name: Build Solution
+      run: msbuild
