@@ -43,16 +43,21 @@
         <Reference Include="System.Data" />
         <Reference Include="System.Xaml" />
         <Reference Include="System.Xml" />
+        <Reference Include="WindowsBase" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Class1.cs" />
-        <Compile Include="Controls\StepPanel.xaml.cs" />
+        <Compile Include="Controls\StepPanel.xaml.cs">
+          <DependentUpon>StepPanel.xaml</DependentUpon>
+        </Compile>
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
       <Content Include="Controls\ArrowCheckButton.xaml" />
-      <Content Include="Controls\StepPanel.xaml" />
       <Content Include="MainWindow.xaml" />
+    </ItemGroup>
+    <ItemGroup>
+      <Page Include="Controls\StepPanel.xaml" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

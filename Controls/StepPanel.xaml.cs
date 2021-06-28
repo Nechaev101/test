@@ -1,12 +1,9 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Markup;
 
-namespace AutomaticMEPTrace.Controls
+namespace AutomaticMEPTrace
 {
-    /// <summary>
-    /// Логика взаимодействия для StepPanel.xaml
-    /// </summary>
     [ContentProperty("Children")]
     public partial class StepPanel : UserControl
     {
