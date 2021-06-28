@@ -1,6 +1,6 @@
 using System.Windows;
 
-namespace AutomaticMEPTrace
+namespace AutomaticMEPTrace.Views
 {
     public partial class MainWindow : Window
     {
