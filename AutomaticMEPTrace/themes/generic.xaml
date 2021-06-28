@@ -1,7 +1,12 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
-    <Style x:Key="CheckBoxStepPanelArrow" TargetType="{x:Type CheckBox}">
+
+        <ResourceDictionary.MergedDictionaries>
+            <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="DeepPurple" SecondaryColor="Lime" />
+            <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+        </ResourceDictionary.MergedDictionaries>
+        <Style x:Key="CheckBoxStepPanelArrow" TargetType="{x:Type CheckBox}">
         <Setter Property="FocusVisualStyle">
                 <Setter.Value>
                     <Style>
@@ -61,7 +66,7 @@
                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
                                      Width="{Binding (materialDesign:CheckBoxAssist.CheckBoxSize), RelativeSource={RelativeSource TemplatedParent}}">
                                 <Canvas Height="24" Width="24">
-                                    <materialDesign:PackIcon Foreground="Aquamarine" x:Name="Arrow" Width="24" Height="24" Kind="ArrowRight">
+                                    <materialDesign:PackIcon Foreground="Black" x:Name="Arrow" Width="24" Height="24" Kind="ArrowRight">
                                         <materialDesign:PackIcon.RenderTransformOrigin>
                                             <Point X="0.5" Y="0.5"/>
                                         </materialDesign:PackIcon.RenderTransformOrigin>
